@@ -1,0 +1,42 @@
+<div>
+	<app-header></app-header>
+</div>
+
+<div class="login-form">
+    <span class="title">
+           Connexion
+    </span>
+
+
+          <div class="login">
+			<!-- <form form [formGroup]="loginForm" autocomplete="off"> -->
+
+
+				<p class="">
+					<label  for="identifiant">Login</label>
+					<input style="margin-left: 3rem;"
+					type="text"
+					id="identifiant"
+					name="identifiant"
+					placeholder="email"
+					formControlName="username"
+					/>
+				</p>
+
+				<p class="">
+					<label  for="identifiant">Password</label>
+					<input style="margin-left: 1.6rem;"
+					type="text"
+					id="Password"
+					name="Password"
+					placeholder="Password"
+					formControlName="Password"
+					/>
+				</p>			
+
+		</div>
+		<div class="button-group">
+			<button class="btn" (click)="signIn()">Sign In</button>
+			<button class="btn" (click)="signUp()">Sign Up</button>
+		</div>
+    <!-- </form> -->

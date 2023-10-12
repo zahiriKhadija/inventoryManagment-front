@@ -1,0 +1,42 @@
+
+<div class="enregistrement">
+    <h2>Sign Up</h2>
+    <form>
+      <div class="form-group">
+        <!-- <label for="first-name">First Name:</label> -->
+        <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+      </div>
+	  <div class="form-group">
+        <!-- <label for="first-name">Last Name:</label> -->
+        <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+      </div>
+	  
+      <div class="form-group">
+        <!-- <label for="email">Email:</label> -->
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <!-- <label for="password">Password:</label> -->
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+
+      <div class="form-group">
+        <!-- <label for="password">Password:</label> -->
+        <input type="password" id="password" name="password" placeholder="Confirm your password" required>
+      </div>
+
+     
+    <div style="display: flex;   justify-content: center">
+      <div class="button-group">
+        <button class="btn" type="submit" (click)="cancel()">Cancel</button>
+      </div>
+
+      <div class="button-group">
+        <button class="btn" type="submit">Confirm</button>
+      </div>
+    </div>
+
+    </form>
+
+  </div>
