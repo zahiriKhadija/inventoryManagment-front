@@ -2,11 +2,11 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-enregistrement',
-  templateUrl: './enregistrement.component.html',
-  styleUrls: ['./enregistrement.component.scss']
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.scss']
 })
-export class EnregistremenComponent implements OnInit, OnDestroy {
+export class RegisterComponent implements OnInit, OnDestroy {
 
   constructor(
     private readonly router: Router,
@@ -17,7 +17,7 @@ export class EnregistremenComponent implements OnInit, OnDestroy {
   }
 
 public cancel(){
-  this.router.navigate(['/authentification']);
+  this.router.navigate(['/login']);
 }
 
 ngOnDestroy(): void {

@@ -2,11 +2,11 @@ import { Component , OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-authentification',
-  templateUrl: './authentification.component.html',
-  styleUrls: ['./authentification.component.scss']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss']
 })
-export class AuthentificationComponent  implements OnInit, OnDestroy {
+export class LoginComponent  implements OnInit, OnDestroy {
   constructor(
     private readonly router: Router,
   ) { }
@@ -22,7 +22,7 @@ export class AuthentificationComponent  implements OnInit, OnDestroy {
 
   public signUp()
   {
-    this.router.navigate(['/signup']);
+    this.router.navigate(['/create-account']);
   }
   
   ngOnDestroy(): void {
