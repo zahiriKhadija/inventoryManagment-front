@@ -1,59 +1,92 @@
-.container {
+/* CSS for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  /* Title styling */
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Container for the table and form */
+  .container {
+    display: flex;
+    align-items: flex-start;
     justify-content: space-between;
-}
-
-.title {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.table-container {
-    width: 100%;
-    padding: 20px;
-    background-color: #ff9900; /* Light orange background color */
+    width: 80%;
+    background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-.button {
-    margin-top: 20px;
-    background-color: #ff9900;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    margin-left: 10px ;
-    border-radius: 10px;
-
-}
-
-
-.form-container {
-    font-family: Arial, Helvetica, sans-serif;
-    width: 50%;
-}
-
-table {
-    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style for the table */
+  .table-container {
+    width: 70%;
+    overflow-x: auto;
+  }
+  
+  table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  th, td {
     border: 1px solid #ddd;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
+    padding: 10px;
     text-align: left;
-}
-
-th {
+  }
+  
+  thead {
     background-color: #f2f2f2;
-}
+  }
+  
+  /* Action buttons in the table */
+  td button {
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin: 2px;
+    cursor: pointer;
+  }
 
-label, input, input[type="submit"] {
-    display: block;
-    margin-bottom: 10px;
-    margin-left: 100px;
-}
+  .update-button{
+    background-color: #3498db;
+  }
+  .delete-button{
+    background-color: #c0392b;
+  }
+  
+  /* Add Customer button */
+  .form-container {
+    width: 25%;
+    padding: 10px;
+    text-align: right;
+  }
+  
+  .addCustomer {
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  /* Hover effect for buttons */
+  /*button:hover {
+    background-color: #2980b9;
+  }*/
+  
 

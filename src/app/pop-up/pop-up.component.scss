@@ -1,0 +1,59 @@
+.myForm {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  /* Label styling */
+  .myForm label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  /* Input field styling */
+  .myForm input[type="text"],
+  .myForm input[type="email"],
+  .myForm input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+  
+  /* Submit button styling */
+  .myForm input.button {
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  /* Button container for Save and Cancel buttons */
+  .myForm > div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  /* Save and Cancel button styling */
+  .myForm button {
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  .save-button{
+    background-color: #3498db;
+  }
+  .cancel-button{
+    background-color: #c0392b;
+  }
