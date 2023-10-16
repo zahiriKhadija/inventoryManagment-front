@@ -10,6 +10,8 @@ import { InnerHomeComponent } from './inner-home/inner-home.component';
 import { HeaderComponent } from './header/header.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -21,10 +23,12 @@ import { LoginComponent } from './login/login.component';
     InnerHomeComponent,
     HeaderComponent,
     RegisterComponent
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
