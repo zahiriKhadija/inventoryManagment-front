@@ -19,7 +19,10 @@
                     <td>{{ customer.email }}</td>
                     <td>{{ customer.password }}</td>
 
-                    <td><button (click)="deleteCustomer(customer)">Delete</button></td>
+                    <td>
+                        <button (click)="deleteCustomer(customer)">Delete</button>
+                        <button (click)="updateCustomer(customer)">Update</button>
+                    </td>
                 </tr>
             </tbody>
         </table>

@@ -10,7 +10,10 @@ import { InnerHomeComponent } from './inner-home/inner-home.component';
 import { HeaderComponent } from './header/header.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PopUpComponent } from './pop-up/pop-up.component';
+import {MatDialogModule} from "@angular/material/dialog";
 
 
 @NgModule({
@@ -22,13 +25,17 @@ import { FormsModule } from '@angular/forms';
     OrderComponent,
     InnerHomeComponent,
     HeaderComponent,
-    RegisterComponent
+    RegisterComponent,
+    PopUpComponent
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
