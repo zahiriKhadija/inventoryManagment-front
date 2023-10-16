@@ -1,22 +1,55 @@
-header {
-    background-color: grey;
-    color: #fff;
-    padding: 36px;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav li {
-    display: inline;
-    margin-right: 20px;
-}
-
 nav a {
     text-decoration: none;
-    color: #fff;
+    color: #000000;
     font-weight: bold;
 }
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0%;
+    background-color: #eeeeee; /* Background color of the header */
+    color: #000000; /* Text color */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    /* Responsive layout adjustments */
+    flex-wrap: wrap;
+    border-radius: 10px;
+  }
+  
+  .logo-container {
+    flex: 1; /* Expands to fill available space */
+    text-align: center; /* Center-align the logo */
+  }
+  
+  .logo {
+    width: 80px; /* Original logo size */
+    margin-right: 17rem;
+  }
+  
+  .menu-container li a:hover {
+    color: #ff7700; /* Change text color on hover */
+    font-weight: bold; /* Add extra emphasis on hover */
+  }
+  
+  .menu-container ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu-container li {
+    display: inline;
+    margin: 0 1rem; /* Adjust the spacing between menu items */
+  }
+  
+ 
+.user-actions {
+    flex: 1; /* Expands to fill available space */
+    text-align: right; /* Right-align user icons */
+    margin-right: 3rem;
+  }
+  
+  .icon  {
+    width: 20px; /* Adjust the size of the user icons */
+    margin-left: 0.5rem;  }
+  

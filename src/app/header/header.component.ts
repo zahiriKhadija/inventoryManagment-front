@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  router: any;
+
+  public customer()
+  {
+    this.router.navigate(['/customer']);
+  }
 
 }
