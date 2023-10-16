@@ -1,19 +1,21 @@
-<div class="form-container">
+<div class="myForm">
     <form>
-        <h2>Details</h2>
-        <label for="firstName">First Name: {{firstName}}</label>
-        
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" [(ngModel)]="data.firstName" required>
 
-        <label for="lastName">Last Name: {{lastName}}</label>
-        
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" [(ngModel)]="data.lastName" required>
 
-        <label for="email">Email: {{email}}</label>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="data.email" required>
 
-
-        <label for="password">Password: {{password}}</label>
-        
-        <button>Cancel</button>
-
+        <label for="password">Password: </label>
+        <input type="password" id="password" name="password" [(ngModel)]="data.password" required>
     </form>
+
+    <div>
+        <button class="save-button" (click)="saveCustomer()">Save</button>
+        <button class="cancel-button" (click)="closePopUp()">Cancel</button>
+    </div>
 </div>
 

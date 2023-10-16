@@ -20,8 +20,8 @@
                     <td>{{ customer.password }}</td>
 
                     <td>
-                        <button (click)="deleteCustomer(customer)">Delete</button>
-                        <button (click)="updateCustomer(customer)">Update</button>
+                        <button class="update-button" (click)="updateCustomer(customer)">Update</button>
+                        <button class="delete-button" (click)="deleteCustomer(customer)">Delete</button>
                     </td>
                 </tr>
             </tbody>
@@ -29,22 +29,7 @@
     </div>
 
     <div class="form-container">
-        <form (submit)="addCustomer()">
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" [(ngModel)]="newCustomer.firstName" required>
-
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" [(ngModel)]="newCustomer.lastName" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" [(ngModel)]="newCustomer.email" required>
-
-            <label for="password">Password: </label>
-            <input type="password" id="password" name="password" [(ngModel)]="newCustomer.password" required>
-
-            <input class="button" type="submit" value="Add Customer">
-        </form>
-    </div>
+        <button class ="addCustomer" (click)="addCustomer()">Add Customer</button>
 </div>
 
 

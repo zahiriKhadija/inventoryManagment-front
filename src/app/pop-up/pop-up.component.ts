@@ -8,17 +8,14 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 })
 export class PopUpComponent{
 
-  firstName;
-  lastName;
-  email;
-  password;
+  constructor(@Inject(MAT_DIALOG_DATA) public data : any, private dialogRef: MatDialogRef<PopUpComponent>){}
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data : any){
-    this.firstName = data.firstName;
-    this.lastName = data.lastName;
-    this.email = data.email;
-    this.password = data.password;
+    closePopUp(){
+    this.dialogRef.close(' ');
   }
 
-
+  saveCustomer(){
+    console.log(this.data);
+    this.dialogRef.close(this.data);
+  }
 }
