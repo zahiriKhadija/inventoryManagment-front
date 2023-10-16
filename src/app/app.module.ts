@@ -12,6 +12,8 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { OrderDetailsComponent } from './order-details/order-details.component';
+
 
 
 @NgModule({
@@ -23,8 +25,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     OrderComponent,
     InnerHomeComponent,
     HeaderComponent,
-    RegisterComponent
-    
+    RegisterComponent,
+    OrderDetailsComponent
+
   ],
   imports: [
     BrowserModule,
