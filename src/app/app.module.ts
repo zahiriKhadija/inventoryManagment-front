@@ -14,6 +14,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PopUpComponent } from './pop-up/pop-up.component';
 import {MatDialogModule} from "@angular/material/dialog";
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { OrderDetailsComponent } from './order-details/order-details.component';
 
 
 @NgModule({
@@ -26,8 +29,8 @@ import {MatDialogModule} from "@angular/material/dialog";
     InnerHomeComponent,
     HeaderComponent,
     RegisterComponent,
-    PopUpComponent
-    
+    PopUpComponent,
+    OrderDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import {MatDialogModule} from "@angular/material/dialog";
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
