@@ -14,8 +14,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PopUpComponent } from './pop-up/pop-up.component';
 import {MatDialogModule} from "@angular/material/dialog";
-import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
 import { OrderDetailsComponent } from './order-details/order-details.component';
 
 
