@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PopUpComponent } from './pop-up/pop-up.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import { OrderDetailsComponent } from './order-details/order-details.component';
+import { CartComponent } from './cart/cart.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { OrderDetailsComponent } from './order-details/order-details.component';
     HeaderComponent,
     RegisterComponent,
     PopUpComponent,
-    OrderDetailsComponent
+    OrderDetailsComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
