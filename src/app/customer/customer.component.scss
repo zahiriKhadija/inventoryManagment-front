@@ -1,92 +1,86 @@
-/* CSS for the entire page */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
-  
-  /* Title styling */
-  .title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  /* Container for the table and form */
-  .container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    width: 80%;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Style for the table */
-  .table-container {
-    width: 70%;
-    overflow-x: auto;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-  }
-  
-  th, td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
-  }
-  
-  thead {
-    background-color: #f2f2f2;
-  }
-  
-  /* Action buttons in the table */
-  td button {
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    margin: 2px;
-    cursor: pointer;
+.customer-head{
+  display: flex;
+  justify-content: space-between;
+}
+
+.addbtn-comp{
+  margin-right: 1rem;
+  margin-top: 3rem;
+}
+.addBtn {
+  background-color: #ff9900;
+  color: #fff;
+  border: none;
+  width: 45%; 
+  height: 50PX;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.icon-add{
+  width: 7%; 
   }
 
-  .update-button{
-    background-color: #3498db;
-  }
-  .delete-button{
-    background-color: #c0392b;
-  }
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;;
+  margin: 0;
+}
+
+table {
+  width: 75%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  margin-top: 0rem;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #d4d0d0;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+      /* Styles pour la pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+h1 {
+  margin-top: 3rem;
+  padding-left: 12rem;
+  margin-bottom: 0rem;
   
-  /* Add Customer button */
-  .form-container {
-    width: 25%;
-    padding: 10px;
-    text-align: right;
-  }
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
   
-  .addCustomer {
-    background-color: #ff9900;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  /* Hover effect for buttons */
-  /*button:hover {
-    background-color: #2980b9;
-  }*/
+td button {
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.updateBtn, .deleteBtn{
+  width: 35px; 
+  padding-right: 1rem;
+}
+
+
+ 
   
 

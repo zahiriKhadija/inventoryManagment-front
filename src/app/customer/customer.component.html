@@ -1,35 +1,48 @@
-<h1 class="title">Customer Information</h1>
+<app-header></app-header>
 
-<div class="container">
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Email</th>
-                    <th>Password</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let customer of customers">
-                    <td>{{ customer.firstName }}</td>
-                    <td>{{ customer.lastName }}</td>
-                    <td>{{ customer.email }}</td>
-                    <td>{{ customer.password }}</td>
-
-                    <td>
-                        <button class="update-button" (click)="updateCustomer(customer)">Update</button>
-                        <button class="delete-button" (click)="deleteCustomer(customer)">Delete</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+<div class="customer-head">
+    <div>
+         <h1 class="title">Customer Information</h1>
     </div>
 
-    <div class="form-container">
-        <button class ="addCustomer" (click)="addCustomer()">Add Customer</button>
+    <div class="addbtn-comp">
+         <button class ="addBtn" (click)="addCustomer()">Add Customer
+             <img class="icon-add" src="../../assets/icons/add.svg" alt="SVG Image">
+        </button>
+    </div>
+</div>
+
+<body>
+    <table>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Action</th>
+        </tr>
+
+        <tr *ngFor="let customer of customers">
+            <td>{{ customer.firstName }}</td>
+            <td>{{ customer.lastName }}</td>
+            <td>{{ customer.email }}</td>
+            <td>{{ customer.password }}</td>
+            <td>
+                <button class="updateBtn" (click)="updateCustomer(customer)">
+                    <img src="../../assets/icons/update.svg" alt="SVG Image">
+                </button>
+                <button class="deleteBtn" (click)="deleteCustomer(customer)">
+                    <img src="../../assets/icons/delete.svg" alt="SVG Image">
+                </button>
+                
+                
+            </td>
+        </tr>
+    </table>
+</body>
+<div class="pagination">
+    <img src="../../assets/icons/left.svg" width="15px" style="padding-right: 1rem;" alt="SVG Image">
+    <img src="../../assets/icons/right.svg" width="15px" style="padding-right: 1rem;" alt="SVG Image">
 </div>
 
 
