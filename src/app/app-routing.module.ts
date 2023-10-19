@@ -7,11 +7,13 @@ import { ProductComponent } from './product/product.component';
 import { CustomerComponent } from './customer/customer.component';
 import { OrderComponent } from './order/order.component';
 import { OrderDetailsComponent } from './order-details/order-details.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'create-account', component: RegisterComponent },
   { path: 'home', component: InnerHomeComponent },
+  { path: 'profile', component: ProfileComponent},
   { path: 'product', component: ProductComponent },
   { path: 'customer', component: CustomerComponent },
   { path: 'order', component: OrderComponent },

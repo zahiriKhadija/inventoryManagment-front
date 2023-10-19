@@ -2,17 +2,24 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Adjust the maximum width as desired */
+    height: auto;
 }
 
 .background {
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: absolute;
     width: 100%;
     height: 100%;
-    z-index: -1;
     filter: blur(5px); /* Apply the blur effect to the background image */
-
 }
 
 .background img {
@@ -21,68 +28,51 @@ body {
     object-fit: cover;
 }
 
-.container {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-.content {
+.profile {
+    position: relative;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
     text-align: center;
-    width: 100%;
-    max-width: 400px; /* Adjust the maximum width as desired */
 }
 
-.register {
-    padding: 20px;
-}
-
-.title {
+.profile h1 {
     font-size: 24px;
     color: #333;
+}
+
+.profile-info {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-info label {
     font-weight: bold;
-    margin-bottom: 20px;
+    color: #555;
 }
 
-.form-group {
-    margin: 10px 0;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 20px; /* Rounded input fields */
-    margin-top: 5px;
+.profile-info span {
+    color: #444;
 }
 
 .button-group {
-    display: flex;
-    justify-content: space-between;
+    text-align: center;
 }
 
-.btn {
-    width: 48%; /* Divide the buttons evenly with a little space in between */
+.button {
     background-color: #FFA500;
     color: white;
     border: none;
     padding: 10px 20px;
+    margin: 10px;
     border-radius: 20px; /* Rounded buttons */
     cursor: pointer;
     transition: background-color 0.3s; /* Smooth color transition */
 }
 
-.btn.cancel {
-    background-color: #9c9c9c;
-}
-
-.btn:hover {
+.button:hover {
     background-color: #FF7F00; /* Slightly darker orange on hover */
 }

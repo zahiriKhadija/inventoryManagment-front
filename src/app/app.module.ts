@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { OrderDetailsComponent } from './order-details/order-details.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -26,7 +27,8 @@ import { OrderDetailsComponent } from './order-details/order-details.component';
     InnerHomeComponent,
     HeaderComponent,
     RegisterComponent,
-    OrderDetailsComponent
+    OrderDetailsComponent,
+    ProfileComponent
 
   ],
   imports: [
