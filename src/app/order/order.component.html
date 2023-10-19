@@ -20,37 +20,13 @@
                 <th>Date création</th>         
                 <th>Actions</th>
             </tr>
-            <tr (click)="afficherDetails()" >
-                <td>1</td>
-                <td>cmd 1</td>
-                <td>John Doe</td>
-                <td style="color: #27cc27;">Valide</td>
-                <td>$100.00</td>
-                <td>29/05/2023</td>
-                <td>
-                    <img src="../../assets/icons/update.svg" width="28px" style="padding-right: 1rem;" alt="SVG Image">
-                    <img src="../../assets/icons/delete.svg" width="25px" style="padding-right: 1rem;" alt="SVG Image">
-                </td>
-            </tr>
-            <tr (click)="afficherDetails()">
-                <td>2</td>
-                <td>cmd 2</td>
-                <td>Jane Smith</td>
-                <td style="color: #ffa500;">En cours</td>
-                <td>$75.00</td>
-                <td>29/05/2023</td>
-                <td>
-                    <img src="../../assets/icons/update.svg" width="28px" style="padding-right: 1rem;" alt="SVG Image">
-                    <img src="../../assets/icons/delete.svg" width="25px" style="padding-right: 1rem;" alt="SVG Image">
-                </td>
-            </tr>
-            <tr (click)="afficherDetails()">
-                <td>3</td>
-                <td>cmd 3</td>
-                <td>Will Smith</td>
-                <td style="color: red;">Rejeté</td>
-                <td>$300.00</td>
-                <td>29/05/2023</td>
+            <tr *ngFor="let order of orders" (click)="afficherDetails()" >
+                <td>{{ order.idOrder }}</td>
+                <td>{{ order.label }}</td>
+                <td>{{ order.username }}</td>
+                <td style="color: #27cc27;">{{ order.status }}</td>
+                <td>{{ order.total }}</td>
+                <td>{{ order.createDate }}</td>
                 <td>
                     <img src="../../assets/icons/update.svg" width="28px" style="padding-right: 1rem;" alt="SVG Image">
                     <img src="../../assets/icons/delete.svg" width="25px" style="padding-right: 1rem;" alt="SVG Image">

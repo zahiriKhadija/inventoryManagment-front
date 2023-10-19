@@ -9,10 +9,9 @@ import { Environment } from '../environment/environment';
 })
 export class OrderService {
   
-
+  public readonly ORDER_PATH: string = "/orders";
   constructor(
-    private readonly http: HttpClient,
-    private readonly ORDER_PATH : "/orders",
+    private readonly http: HttpClient
   ) { }
 
   public getOrders():Observable<Array<Order>>{

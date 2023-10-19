@@ -17,6 +17,7 @@ import {MatDialogModule} from "@angular/material/dialog";
 import { OrderDetailsComponent } from './order-details/order-details.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CartComponent } from './cart/cart.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -43,7 +44,8 @@ import { CartComponent } from './cart/cart.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatDialogModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
