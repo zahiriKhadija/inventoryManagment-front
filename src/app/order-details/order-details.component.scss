@@ -1,6 +1,5 @@
 body {
     font-family: Arial, sans-serif;
-    //background-color: #f2f2f2;
     padding: 20px;
 }
 
@@ -10,17 +9,36 @@ h1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.order-details {
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    max-width: 600px;
-    margin: 0 auto;
+.order-details-block{
+    display: flex;
 }
 
+.order-details-right{
+    width: 30%;
+    margin-left: 5%;
+}
+
+.order-details-left {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding: 20px;
+    max-width: 55%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-right: 5%;
+    margin-bottom: 10rem;
+}
+
+.order-details {
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
 .order-details h2 {
-    
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -28,18 +46,46 @@ h1 {
     margin: 10px 0;
 }
 
-.order-details .back-button {
-    text-align: center;
-    margin-top: 20px;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin-top: 0rem;
 }
 
-.btn {
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #d4d0d0;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+
+.back-button {
+    width: 8rem;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
     margin-top: 20px;
-    background-color: #FFA500;
-    color: #fff;
-    padding: 10px 20px;
+    padding-right: 0rem;
+    background-color: #FF6D43;
+    color: black;
+    border-radius: 10px;
+    background-image: url('../../assets/icons/left.svg');
+    background-repeat: no-repeat;
+    background-position: 12px;
+    background-size: 18px;
     border: none;
     cursor: pointer;
-    border-radius: 10px;
-    width: 7rem;
 }

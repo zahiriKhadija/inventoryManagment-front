@@ -1,22 +1,50 @@
 <app-header></app-header>
 <body>
     <h1>Détails de la commande #12345</h1>
+    <div class="order-details-block">
+        <div class="order-details-right">
+            <h2>Informations sur la commande</h2>
+            <p><strong>ID de la commande:</strong> 12345</p>
+            <p><strong>Nom du client:</strong> John Doe</p>
+            <p><strong>Reference commande:</strong> AB122</p>
+            <p><strong>Total:</strong> $100.00</p>
 
-    <div class="order-details">
-        <h2>Informations sur la commande</h2>
-        <p><strong>ID de la commande:</strong> 12345</p>
-        <p><strong>Nom du client:</strong> John Doe</p>
-        <p><strong>Produit:</strong> Produit A</p>
-        <p><strong>Montant:</strong> $100.00</p>
-
-        <h2>Adresse de livraison</h2>
-        <p><strong>Nom du client:</strong> John Doe</p>
-        <p><strong>Adresse:</strong> 123 Rue Principale</p>
-        <p><strong>Ville:</strong> Villeville</p>
-        <p><strong>Code postal:</strong> 12345</p>
-
-        <div class="back-button">
-            <button class="btn" (click)="retour()">Retour</button>
+            <h2>Adresse de livraison</h2>
+            <p><strong>Nom du client:</strong> John Doe</p>
+            <p><strong>Mobile:</strong> 07888888888</p>
+            <p><strong>Adresse:</strong> 123 Rue Principale</p>
+            <p><strong>Ville:</strong> Villeville</p>
+            <p><strong>Code postal:</strong> 12345</p>
         </div>
+
+        <div class="order-details-left">
+        <div class="order-details">
+            <h2>detail de la commande</h2>
+            <table>
+                <tr>
+                    <th>ID de l'ordre</th>
+                    <th>Montant</th>  
+                    <th>Quantité</th>
+                    <th>Total</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>$10.00</td>
+                    <td>2</td>
+                    <td>$20.00</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>$30.00</td>
+                    <td>3</td>
+                    <td>$90.00</td>
+                </tr>
+            </table>
+        </div>
+        <div style="text-align: right;">
+            <button class="back-button" (click)="retour()">Retour</button>
+        </div>
+        </div>
+ 
     </div>
 </body>

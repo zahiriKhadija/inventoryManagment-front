@@ -1,73 +1,65 @@
 <app-header></app-header>
-<div style="
-display: flex;
-justify-content: space-between;
-">
+<div class="ordre-top">
 <div>
     <h1>Liste des ordres</h1>
 </div>
-<div style="
-margin-right: 11rem;
-margin-top: 3rem;
-">
-    <img src="../../assets/icons/add.svg" width="30px" style="padding-right: 1rem;" alt="SVG Image">
+<div class="ordre-button">
+    <button class="add-button">Ajouter un ordre</button>
 </div>
 </div>
+              
+<div>
+    <body>
+        <table>
+            <tr>
+                <th>ID de l'ordre</th>
+                <th>Réference Ordre</th>  
+                <th>Nom du client</th>
+                <th>Status</th>
+                <th>Montant</th>
+                <th>Date création</th>         
+                <th>Actions</th>
+            </tr>
+            <tr (click)="afficherDetails()">
+                <td>1</td>
+                <td>cmd 1</td>
+                <td>John Doe</td>
+                <td style="color: #27cc27;">Valide</td>
+                <td>$100.00</td>
+                <td>29/05/2023</td>
+                <td>
+                    <img src="../../assets/icons/update.svg" width="28px" style="padding-right: 1rem;" alt="SVG Image">
+                    <img src="../../assets/icons/delete.svg" width="25px" style="padding-right: 1rem;" alt="SVG Image">
+                </td>
+            </tr>
+            <tr (click)="afficherDetails()">
+                <td>2</td>
+                <td>cmd 2</td>
+                <td>Jane Smith</td>
+                <td style="color: #ffa500;">En cours</td>
+                <td>$75.00</td>
+                <td>29/05/2023</td>
+                <td>
+                    <img src="../../assets/icons/update.svg" width="28px" style="padding-right: 1rem;" alt="SVG Image">
+                    <img src="../../assets/icons/delete.svg" width="25px" style="padding-right: 1rem;" alt="SVG Image">
+                </td>
+            </tr>
+            <tr (click)="afficherDetails()">
+                <td>3</td>
+                <td>cmd 3</td>
+                <td>Will Smith</td>
+                <td style="color: red;">Rejeté</td>
+                <td>$300.00</td>
+                <td>29/05/2023</td>
+                <td>
+                    <img src="../../assets/icons/update.svg" width="28px" style="padding-right: 1rem;" alt="SVG Image">
+                    <img src="../../assets/icons/delete.svg" width="25px" style="padding-right: 1rem;" alt="SVG Image">
+                </td>
+            </tr>
+        </table>
+    </body>
+</div>
 
-                
-
-<body>
-    <table>
-        <tr>
-            <th>ID de l'ordre</th>
-            <th>Réference Ordre</th>  
-            <th>Nom du client</th>
-            <th>Status</th>
-            <th>Montant</th>
-            <th>Date création</th>         
-            <th>Actions</th>
-        </tr>
-        <tr (click)="afficherDetails()">
-            <td>1</td>
-            <td>cmd 1</td>
-            <td>John Doe</td>
-            <td style="color: #27cc27;">Valide</td>
-            <td>$100.00</td>
-            <td>29/05/2023</td>
-            <td>
-                <img src="../../assets/icons/update.svg" width="28px" style="padding-right: 1rem;" alt="SVG Image">
-                <img src="../../assets/icons/delete.svg" width="25px" style="padding-right: 1rem;" alt="SVG Image">
-            </td>
-        </tr>
-        <tr (click)="afficherDetails()">
-            <td>2</td>
-            <td>cmd 2</td>
-            <td>Jane Smith</td>
-            <td style="color: #ffa500;">En cours</td>
-            <td>$75.00</td>
-            <td>29/05/2023</td>
-            <td>
-                <img src="../../assets/icons/update.svg" width="28px" style="padding-right: 1rem;" alt="SVG Image">
-                <img src="../../assets/icons/delete.svg" width="25px" style="padding-right: 1rem;" alt="SVG Image">
-            </td>
-        </tr>
-        <tr (click)="afficherDetails()">
-            <td>3</td>
-            <td>cmd 3</td>
-            <td>Will Smith</td>
-            <td style="color: red;">Rejeté</td>
-            <td>$300.00</td>
-            <td>29/05/2023</td>
-            <td>
-                <img src="../../assets/icons/update.svg" width="28px" style="padding-right: 1rem;" alt="SVG Image">
-                <img src="../../assets/icons/delete.svg" width="25px" style="padding-right: 1rem;" alt="SVG Image">
-            </td>
-        </tr>
-        <!-- Ajoutez d'autres lignes ici -->
-    </table>
-    <!-- Pagination en bas du tableau -->
-
-</body>
 <div class="pagination">
     <img src="../../assets/icons/left.svg" width="15px" style="padding-right: 1rem;" alt="SVG Image">
     <img src="../../assets/icons/right.svg" width="15px" style="padding-right: 1rem;" alt="SVG Image">
