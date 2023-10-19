@@ -31,7 +31,7 @@ import { CartComponent } from './cart/cart.component';
     HeaderComponent,
     RegisterComponent,
     OrderDetailsComponent,
-    ProfileComponent
+    ProfileComponent,
     PopUpComponent,
     OrderDetailsComponent,
     CartComponent
