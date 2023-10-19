@@ -15,7 +15,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PopUpComponent } from './pop-up/pop-up.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import { OrderDetailsComponent } from './order-details/order-details.component';
+import { ProfileComponent } from './profile/profile.component';
 import { CartComponent } from './cart/cart.component';
+
 
 
 @NgModule({
@@ -28,6 +30,8 @@ import { CartComponent } from './cart/cart.component';
     InnerHomeComponent,
     HeaderComponent,
     RegisterComponent,
+    OrderDetailsComponent,
+    ProfileComponent
     PopUpComponent,
     OrderDetailsComponent,
     CartComponent
