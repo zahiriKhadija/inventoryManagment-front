@@ -1,10 +1,4 @@
 
 export const Environment = {
-
-product : 'productService',
-order: 'orderService',
-backendHost : 'http://localhost:'
-
-
-
+backendHost : 'http://localhost:8082'
 }
