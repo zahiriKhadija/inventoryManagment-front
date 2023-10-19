@@ -26,8 +26,9 @@ h1 {
 
 }
 table {
-    width: 100%;
+    width: 90%;
     border-collapse: collapse;
+    margin: auto;
 
 }
 th, td {
@@ -55,8 +56,19 @@ tr:nth-child(even) {
 img{
   width: 80px;
 }
+.updateImg{
+  width: 20px;
+}
+.deleteImg{
+  width: 18px;
+}
+.action{
+  display: flex;
+  justify-content: center;
+  margin-top: 46px;
+}
 .card {
-  
+  cursor: pointer;
   margin-left: auto;
   display: flex;
   width: min-content;
@@ -117,7 +129,7 @@ img{
   font-weight: bold;
 
 }
-.add-button, .delete-button, .add-cardButton {
+.add-button, .delete-button {
 
     padding: 10px 20px;
     background-color: #4CAF50;
@@ -127,6 +139,14 @@ img{
     border-radius: 20px;
     transition: background-color 0.3s;
 
+}
+.add-cardButton{
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 .add-cardButton{
   
@@ -229,40 +249,3 @@ footer {
 
 }
 
-.shopping-cart {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  margin: 20px;
-}
-
-.shopping-cart h2 {
-  font-size: 24px;
-  margin: 10px 0;
-}
-
-.shopping-cart ul {
-  list-style: none;
-  padding: 0;
-}
-
-.shopping-cart li {
-  margin: 10px 0;
-}
-
-.shopping-cart button {
-  background-color: #f44336;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 20px;
-  transition: background-color 0.3s;
-  margin-left: 10px;
-}
-
-.shopping-cart button:hover {
-  background-color: #d32f2f;
-}
