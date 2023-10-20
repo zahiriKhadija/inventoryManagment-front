@@ -1,3 +1,5 @@
+import { RoleDto } from "./roleDto.model";
+
 export class User{
      constructor(
      userId: number,
@@ -5,6 +7,6 @@ export class User{
      password: string,
      firstname: string,
      lastname: string,
-     role: string
+     role: Array<RoleDto>
      ){}
 }

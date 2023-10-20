@@ -8,17 +8,19 @@ import { CustomerComponent } from './customer/customer.component';
 import { OrderComponent } from './order/order.component';
 import { OrderDetailsComponent } from './order-details/order-details.component';
 import { ProfileComponent } from './profile/profile.component';
+import { authGuard } from './guard/auth.guard';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'create-account', component: RegisterComponent },
-  { path: 'home', component: InnerHomeComponent },
+  { path: 'home', component: InnerHomeComponent, canActivate: [authGuard]},
   { path: 'profile', component: ProfileComponent},
   { path: 'product', component: ProductComponent },
   { path: 'customer', component: CustomerComponent },
   { path: 'order', component: OrderComponent },
   { path: 'order-details', component: OrderDetailsComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full'},
+
 
 ];
 
