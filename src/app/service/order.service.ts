@@ -10,9 +10,19 @@ import { Environment } from '../environment/environment';
 export class OrderService {
   
   public readonly ORDER_PATH: string = "/orders";
+  private order!: Order;
+
   constructor(
     private readonly http: HttpClient
   ) { }
+
+  public setOrder(order: Order) {
+    this.order = order;
+  }
+
+  public getOrder(): Order {
+    return this.order;
+  }
 
   public getOrders():Observable<Array<Order>>{
     return this.http.get<Array<Order>>(Environment.backendHost + this.ORDER_PATH + "/all")

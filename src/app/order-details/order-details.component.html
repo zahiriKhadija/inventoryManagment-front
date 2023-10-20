@@ -1,20 +1,18 @@
 <app-header></app-header>
 <body>
-    <h1>Détails de la commande #12345</h1>
+    <h1>Détails de la commande #{{ order.idOrder }}</h1>
     <div class="order-details-block">
         <div class="order-details-right">
             <h2>Informations sur la commande</h2>
-            <p><strong>ID de la commande:</strong> 12345</p>
-            <p><strong>Nom du client:</strong> John Doe</p>
-            <p><strong>Reference commande:</strong> AB122</p>
-            <p><strong>Total:</strong> $100.00</p>
+            <p><strong>Nom du client:</strong> {{ order.username }} </p>
+            <p><strong>Reference commande:</strong>{{ order.label }} </p>
+            <p><strong>Total:</strong>{{ order.total }} </p>
 
             <h2>Adresse de livraison</h2>
-            <p><strong>Nom du client:</strong> John Doe</p>
-            <p><strong>Mobile:</strong> 07888888888</p>
-            <p><strong>Adresse:</strong> 123 Rue Principale</p>
-            <p><strong>Ville:</strong> Villeville</p>
-            <p><strong>Code postal:</strong> 12345</p>
+            <p><strong>Mobile:</strong> {{ order.mobile }}</p>
+            <p><strong>Adresse:</strong> {{ order.adresse }}</p>
+            <p><strong>Ville:</strong> {{ order.ville }}</p>
+            <p><strong>Code postal:</strong> {{ order.codePostal }}</p>
         </div>
 
         <div class="order-details-left">
@@ -27,22 +25,17 @@
                     <th>Quantité</th>
                     <th>Total</th>
                 </tr>
-                <tr>
-                    <td>1</td>
-                    <td>$10.00</td>
-                    <td>2</td>
-                    <td>$20.00</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>$30.00</td>
-                    <td>3</td>
-                    <td>$90.00</td>
-                </tr>
+                <tr *ngFor="let orderDetail of order.orderDetails">
+                    <td>{{ orderDetail.idProduct }}</td>
+                    <td>{{ orderDetail.price }}</td>
+                    <td>{{ orderDetail.quantity }}</td>
+                    <td>{{ orderDetail.price * orderDetail.quantity | currency:'USD':'symbol' }}</td>
+                 </tr>
             </table>
         </div>
         <div style="text-align: right;">
             <button class="back-button" (click)="retour()">Retour</button>
+            <button *ngIf="order.status == 'PENDING'" class="validate-button" (click)="validate(order)" [disabled]="isButtonDisabled">Valider</button>
         </div>
         </div>
  

@@ -89,3 +89,18 @@ tr:nth-child(odd) {
     border: none;
     cursor: pointer;
 }
+
+.validate-button{
+    margin-left: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 8rem;
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+
+}

@@ -1,4 +1,5 @@
 import { OrderDetail } from "./OrderDetail.model";
+import { OrderStatus } from "./OrderStatus.enum";
 
 export class Order{
     constructor(
@@ -7,8 +8,12 @@ export class Order{
         public idUser: number,
         public username: string,
         public createDate: Date,
-        public status: boolean,
+        public status: OrderStatus,
         public total: number,
+        public mobile: string,
+        public adresse: string,
+        public ville: string,
+        public codePostal: string,
         public orderDetails : OrderDetail []  = []
         ){}
 }

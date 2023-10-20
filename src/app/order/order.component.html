@@ -20,16 +20,16 @@
                 <th>Date création</th>         
                 <th>Actions</th>
             </tr>
-            <tr *ngFor="let order of orders" (click)="afficherDetails()" >
-                <td>{{ order.idOrder }}</td>
-                <td>{{ order.label }}</td>
-                <td>{{ order.username }}</td>
-                <td style="color: #27cc27;">{{ order.status }}</td>
-                <td>{{ order.total }}</td>
-                <td>{{ order.createDate }}</td>
+            <tr *ngFor="let order of orders">
+                <td  (click)="afficherDetails(order)">{{ order.idOrder }}</td>
+                <td  (click)="afficherDetails(order)">{{ order.label }}</td>
+                <td  (click)="afficherDetails(order)">{{ order.username }}</td>  
+                <td  (click)="afficherDetails(order)" style="color: #27cc27;">{{ getStatus(order.status) }}</td>
+                <td  (click)="afficherDetails(order)">{{ order.total }}</td>
+                <td (click)="afficherDetails(order)">{{ order.createDate }}</td>
                 <td>
-                    <img src="../../assets/icons/update.svg" width="28px" style="padding-right: 1rem;" alt="SVG Image">
-                    <img src="../../assets/icons/delete.svg" width="25px" style="padding-right: 1rem;" alt="SVG Image">
+                    <img *ngIf="order.status == 'PENDING'" src="../../assets/icons/update.svg" width="28px" style="padding-right: 1rem;" alt="SVG Image">
+                    <img *ngIf="order.status != 'REJECT'"  (click)="delete(order.idOrder)" src="../../assets/icons/delete.svg" width="25px" style="padding-right: 1rem;" alt="SVG Image">
                 </td>
             </tr>
         </table>
