@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Order } from '../models/order.model';
@@ -24,9 +24,20 @@ export class OrderService {
     return this.order;
   }
 
-  public getOrders():Observable<Array<Order>>{
-    return this.http.get<Array<Order>>(Environment.backendHost + this.ORDER_PATH + "/all")
+
+  public getOrders(page: number, size: number): Observable<Array<Order>> {
+    // Créez un objet HttpParams pour inclure les paramètres de pagination dans la requête.
+    const params = new HttpParams()
+      .set('page', page.toString())
+      .set('size', size.toString());
+
+    // Utilisez les paramètres pour personnaliser votre requête.
+    return this.http.get<Array<Order>>(
+      Environment.backendHost + this.ORDER_PATH + '/all',
+      { params: params }
+    );
   }
+
 
   public getOrdersByIdUser():Observable<Array<Order>>{
     return this.http.get<Array<Order>>(Environment.backendHost + this.ORDER_PATH + "/byIdUser")

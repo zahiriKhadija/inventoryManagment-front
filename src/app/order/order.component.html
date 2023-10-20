@@ -1,42 +1,42 @@
 <app-header></app-header>
 <div class="ordre-top">
-<div>
-    <h1>Liste des ordres</h1>
+    <div>
+        <h1>Liste des ordres</h1>
+    </div>
+    <div class="ordre-button">
+        <button class="add-button">Ajouter un ordre</button>
+    </div>
 </div>
-<div class="ordre-button">
-    <button class="add-button">Ajouter un ordre</button>
-</div>
-</div>
-              
-<div>
+
+<div class="table-container">
+
     <body>
         <table>
             <tr>
                 <th>ID de l'ordre</th>
-                <th>Réference Ordre</th>  
+                <th>Réference Ordre</th>
                 <th>Nom du client</th>
                 <th>Status</th>
                 <th>Montant</th>
-                <th>Date création</th>         
+                <th>Date création</th>
                 <th>Actions</th>
             </tr>
-            <tr *ngFor="let order of orders">
-                <td  (click)="afficherDetails(order)">{{ order.idOrder }}</td>
-                <td  (click)="afficherDetails(order)">{{ order.label }}</td>
-                <td  (click)="afficherDetails(order)">{{ order.username }}</td>  
-                <td  (click)="afficherDetails(order)" style="color: #27cc27;">{{ getStatus(order.status) }}</td>
-                <td  (click)="afficherDetails(order)">{{ order.total }}</td>
+            <tr *ngFor="let order of orders | paginate:{itemsPerPage: pagination.size, currentPage: currentPage,totalItems: totalPages * pagination.size}; let i=index">
+                <td (click)="afficherDetails(order)">{{ order.idOrder }}</td>
+                <td (click)="afficherDetails(order)">{{ order.label }}</td>
+                <td (click)="afficherDetails(order)">{{ order.username }}</td>
+                <td (click)="afficherDetails(order)" style="color: #27cc27;">{{ getStatus(order.status) }}</td>
+                <td (click)="afficherDetails(order)">{{ order.total }}</td>
                 <td (click)="afficherDetails(order)">{{ order.createDate }}</td>
                 <td>
-                    <img *ngIf="order.status == 'PENDING'" src="../../assets/icons/update.svg" width="28px" style="padding-right: 1rem;" alt="SVG Image">
-                    <img *ngIf="order.status != 'REJECT'"  (click)="delete(order.idOrder)" src="../../assets/icons/delete.svg" width="25px" style="padding-right: 1rem;" alt="SVG Image">
+                    <img *ngIf="order.status == 'PENDING'" src="../../assets/icons/update.svg" width="28px"
+                        style="padding-right: 1rem;" alt="SVG Image">
+                    <img *ngIf="order.status != 'REJECT'" (click)="delete(order.idOrder)"
+                        src="../../assets/icons/delete.svg" width="25px" style="padding-right: 1rem;" alt="SVG Image">
                 </td>
             </tr>
         </table>
     </body>
 </div>
 
-<div class="pagination">
-    <img src="../../assets/icons/left.svg" width="15px" style="padding-right: 1rem;" alt="SVG Image">
-    <img src="../../assets/icons/right.svg" width="15px" style="padding-right: 1rem;" alt="SVG Image">
-</div>
+<pagination-controls class ="pagination" (pageChange)="currentPage = $event; loadData()"></pagination-controls>

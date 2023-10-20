@@ -18,6 +18,7 @@ import { OrderDetailsComponent } from './order-details/order-details.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CartComponent } from './cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -45,7 +46,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MatDialogModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

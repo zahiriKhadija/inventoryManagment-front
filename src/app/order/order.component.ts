@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { OrderService } from '../service/order.service';
 import { Order } from '../models/order.model';
 import { OrderStatus } from "../models/OrderStatus.enum";
+import { Pagination } from '../models/Pagination.model';
 
 @Component({
   selector: 'app-order',
@@ -11,9 +12,13 @@ import { OrderStatus } from "../models/OrderStatus.enum";
 })
 
 export class OrderComponent implements OnInit{
-  orders!: Order[];
+  orders: Order[] = [];
   OrderStatus = OrderStatus;
   isButtonDeleteDisabled: boolean = false;
+  pagination: Pagination = { page: 0, size: 5 };
+  currentPage: any = 1;
+  totalPages: any;
+
   constructor(
     private readonly router: Router,
     private orderService: OrderService
@@ -29,11 +34,18 @@ export class OrderComponent implements OnInit{
         this.orders = orders;
       });
     }*/
-    this.orderService.getOrders().subscribe((orders) => {
-      this.orders = orders;
-    });
+    this.loadData();
   
   }
+ 
+  loadData(){
+    const page = this.currentPage-1;
+  this.orderService.getOrders(page, this.pagination.size).subscribe((response: any) => {
+    this.orders = response.content;
+    this.totalPages = response.totalPages;
+    console.log(response);
+  }); 
+}
 
   public afficherDetails(order: Order)
   {
@@ -54,5 +66,8 @@ export class OrderComponent implements OnInit{
   public delete(idOrder: number){
     this.orderService.deleteOrder(idOrder).subscribe();
     this.isButtonDeleteDisabled = true;
+  }
+  loadPageData(){
+
   }
 }
