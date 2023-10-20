@@ -10,10 +10,15 @@ import { InnerHomeComponent } from './inner-home/inner-home.component';
 import { HeaderComponent } from './header/header.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PopUpComponent } from './pop-up/pop-up.component';
 import {MatDialogModule} from "@angular/material/dialog";
+<<<<<<< HEAD
+=======
+import { ReactiveFormsModule } from '@angular/forms';
+
+>>>>>>> 2d3933551201e981d89812bdcff31d648fc870f0
 import { OrderDetailsComponent } from './order-details/order-details.component';
 
 

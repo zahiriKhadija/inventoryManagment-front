@@ -4,6 +4,7 @@ import {MatDialog} from "@angular/material/dialog";
 import {MatDialogConfig} from "@angular/material/dialog";
 import { PopUpComponent } from '../pop-up/pop-up.component';
 
+
 @Component({
     selector: 'app-customer',
     templateUrl: './customer.component.html',
